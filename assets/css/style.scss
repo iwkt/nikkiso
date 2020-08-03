@@ -107,7 +107,7 @@ $mcolor: #1565c0;
     border-right: 1px solid #fff;
     padding: 0 15px;
   }
-  & ul:nth-of-type(1) li {
+  & ul>li {
     border-bottom: 1px solid $linecolor;
     padding: 17px 0 17px 17px;
   }
@@ -117,6 +117,7 @@ $mcolor: #1565c0;
   & li:nth-of-type(n+6) {
     text-align: center;
     border-bottom: none !important;
+    padding: 17px 0;
   }
 }
 // moblie menu ここまで　=====================
