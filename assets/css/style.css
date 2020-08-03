@@ -1,0 +1,273 @@
+@charset "UTF-8";
+.headerlogo {
+  margin: 9px;
+}
+
+.headertop {
+  border-bottom: 1px solid #1565c0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav_area a {
+  position: fixed;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  background-color: #1565c0;
+  z-index: 2;
+}
+
+.nav_open div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav_open div:nth-of-type(1) {
+  -webkit-transform: translate(-50%, -10px);
+          transform: translate(-50%, -10px);
+}
+
+.nav_open div:nth-of-type(3) {
+  -webkit-transform: translate(-50%, 7px);
+          transform: translate(-50%, 7px);
+}
+
+.nav_open.active div:nth-last-child(1) {
+  -webkit-transform: rotate(45deg) translate(-50%, 0px);
+          transform: rotate(45deg) translate(-50%, 0px);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.nav_open.active div:nth-last-child(2) {
+  opacity: 0;
+}
+
+.nav_open.active div:nth-last-child(3) {
+  -webkit-transform: rotate(-45deg) translate(-50%, 0px);
+          transform: rotate(-45deg) translate(-50%, 0px);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.fas {
+  margin-left: 10px;
+}
+
+.form {
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 13px 0;
+  margin: 40px 0;
+  width: 350px;
+}
+
+.mobile_menu {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 51px);
+  background-color: #1565c0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  z-index: 20;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.mobile_menu li {
+  background-color: #1565c0;
+  opacity: 0;
+}
+
+.mobile_menu.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.mobile_menu.active li {
+  opacity: 1;
+}
+
+.mobile_menu.active li:nth-of-type(1) {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+.mobile_menu.active li:nth-of-type(2) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.mobile_menu.active li:nth-of-type(3) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.mobile_menu.active li:nth-of-type(4) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.mobile_menu.active li:nth-of-type(5) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.mobile_menu.active li:nth-of-type(6) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.mobile_menu.active li:nth-of-type(7) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.mobile_menu.active li:nth-of-type(8) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.mobile_menu.active li:nth-of-type(9) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.mobile_menu.active li:nth-of-type(10) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.mobile_menu a {
+  color: #fff;
+}
+
+.mobile_menu span {
+  display: inline-block;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding: 0 15px;
+}
+
+.mobile_menu ul:nth-of-type(1) li {
+  border-bottom: 1px solid #90a4ae;
+  padding: 17px 0 17px 17px;
+}
+
+.mobile_menu li:nth-of-type(n+6) {
+  text-align: center;
+  border-bottom: none !important;
+}
+
+/*=== 画像の表示エリア ================================= */
+.slide {
+  position: relative;
+  overflow: hidden;
+  /* 画像のサイズに合わせて変更ください */
+  width: 100%;
+}
+
+.slide::before {
+  content: "";
+  display: block;
+  padding-top: 40.5%;
+  /* 高さを幅の75%に固定 */
+}
+
+/*=== slide 画像の設定 ======================================= */
+.slide img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-animation: slideAnime 25s ease infinite;
+          animation: slideAnime 25s ease infinite;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+/*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.slide img:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.slide img:nth-of-type(3) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.slide img:nth-of-type(4) {
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+
+.slide img:nth-of-type(5) {
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+/*=== スライドのアニメーション ========================= */
+@-webkit-keyframes slideAnime {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideAnime {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*=== 画像の表示エリア ここまで================================= */
+/*# sourceMappingURL=style.css.map */

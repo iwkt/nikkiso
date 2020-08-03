@@ -1,0 +1,165 @@
+$linecolor: #90a4ae;
+$mcolor: #1565c0;
+
+.headerlogo {
+  margin: 9px;
+}
+.headertop {
+  border-bottom: 1px solid $mcolor;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+//ハンバーガーmenu============= 
+.nav_area a { //外枠の丸
+  position: fixed;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  background-color: #1565c0;
+  z-index: 2;
+}
+.nav_open {
+  & div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+
+    &:nth-of-type(1) {
+      transform: translate(-50%,-10px);
+    }
+    &:nth-of-type(3) {
+      transform: translate(-50%,7px);
+    }
+  }
+}
+.nav_open.active div {
+  &:nth-last-child(1) {
+    transform: rotate(45deg) translate(-50%,0px);
+    transform-origin: left;
+  }
+  &:nth-last-child(2) {
+    opacity: 0;
+  }
+  &:nth-last-child(3) {
+    transform: rotate(-45deg) translate(-50%,0px);
+    transform-origin: left;
+  } 
+}
+//ハンバーガーmenuここまで============= 
+
+// moblie menu ここから　=====================
+.fas {
+  margin-left: 10px;
+}
+.form {
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 13px 0;
+  margin: 40px 0;
+  width: 350px;
+  }
+.mobile_menu {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 51px);
+  background-color: $mcolor;
+  transform: scaleY(0);
+  z-index: 20;
+  transition: all 0.5s;
+  transform-origin: top;
+
+  & li {
+    background-color: $mcolor;
+    opacity: 0;
+  }
+  &.active {
+    transform: scaleY(1);
+    & li {
+      opacity: 1;
+
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          transition-delay: $i * 0.05s;
+        }
+      }
+    }
+  }
+  & a {
+    color: #fff;
+  }
+  & span {
+    display: inline-block;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 0 15px;
+  }
+  & ul:nth-of-type(1) li {
+    border-bottom: 1px solid $linecolor;
+    padding: 17px 0 17px 17px;
+  }
+  // & ul:nth-of-type(2) li {
+  //   text-align: center;
+  // }
+  & li:nth-of-type(n+6) {
+    text-align: center;
+    border-bottom: none !important;
+  }
+}
+// moblie menu ここまで　=====================
+
+/*=== 画像の表示エリア ================================= */
+.slide {
+  position   : relative;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 100%;
+
+}
+
+.slide::before {
+  content:"";
+  display: block;
+  padding-top: 40.5%; /* 高さを幅の75%に固定 */
+}
+ 
+ /*=== slide 画像の設定 ======================================= */
+.slide img {
+  display    : block;
+  position   : absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; 
+  opacity    : 0;
+  animation  : slideAnime 25s ease infinite;
+  animation-fill-mode: none
+}
+ 
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) { animation-delay: 0s }
+.slide img:nth-of-type(2) { animation-delay: 5s }
+.slide img:nth-of-type(3) { animation-delay: 10s }
+.slide img:nth-of-type(4) { animation-delay: 15s }
+.slide img:nth-of-type(5) { animation-delay: 20s }
+ 
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+   0% { opacity: 0 }
+  10% { opacity: 1 }
+  20% { opacity: 1 }
+  30% { opacity: 0 }
+ 100% { opacity: 0 }
+}
+/*=== 画像の表示エリア ここまで================================= */
