@@ -6,9 +6,10 @@ $mcolor: #1565c0;
 }
 .headertop {
   border-bottom: 1px solid $mcolor;
-  position: sticky;
+  position: fixed;
   background-color: #fff;
   height: 51px;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
@@ -65,7 +66,7 @@ $mcolor: #1565c0;
 }
 .form {
   border: 1px solid #fff;
-  display: inline-block;
+  display: inline-block!important;
   padding: 13px 0;
   margin: 40px 0;
   width: 300px;
@@ -75,22 +76,34 @@ $mcolor: #1565c0;
   top: 51px;
   left: 0;
   width: 100%;
-  // height: calc(100% - 51px);
   height: 100%;
-  // overflow-x: hidden;
   background-color: $mcolor;
   transform: scaleY(0);
   z-index: 20;
-  transition: all 0.7s;
+  transition: all 0.4s;
   transform-origin: top;
-
-  & li {
-    background-color: $mcolor;
-    opacity: 0;
-  }
   &.active {
     transform: scaleY(1);
-    & li {
+  }
+  & a {
+    display: block;
+    color: #fff;
+    padding:0 17px;
+    line-height: 50px;
+  }
+  & span {
+    display: inline-block;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 0 15px;
+  }
+}
+
+.mobile_menu__main {
+  & > li {
+    background-color: $mcolor;
+    opacity: 0;
+    .active & {
       opacity: 1;
 
       @for $i from 1 through 10 {
@@ -100,43 +113,66 @@ $mcolor: #1565c0;
       }
     }
   }
-  & a {
-    color: #fff;
-  }
-  & span {
-    display: inline-block;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    padding: 0 15px;
-  }
-  & ul>li {
+  & >li {
     border-bottom: 1px solid $linecolor;
-    padding: 17px 0 17px 17px;
   }
-  // & ul:nth-of-type(2) li {
-  //   text-align: center;
-  // }
-  & li:nth-of-type(n+6) {
+  &>li:nth-last-child(-n+2) {
     text-align: center;
     border-bottom: none !important;
     padding: 0;
   }
+  & >li:last-child {
+    padding-bottom: 50px;
+  }
 }
+
+.ul_child {
+  height: 0;
+  // opacity: 0;
+  transition: all 0.42s;
+  overflow: hidden;
+  & li {
+    background-color: #4484cd;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &.inview {
+    // opacity: 1;
+    height: auto;
+    @for $i from 1 through 6 {
+      height: 50px * $i;
+    }
+    & li {
+      visibility: visible;
+      border-top: 1px dotted $linecolor;
+      
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          transition-delay: $i * 60ms;
+        }
+      }
+    }
+  }
+}
+
 // moblie menu ここまで　=====================
 
 /*=== 画像の表示エリア ================================= */
 .slide {
   position   : relative;
   overflow   : hidden;
-                    /* 画像のサイズに合わせて変更ください */
   width      : 100%;
-
 }
 
 .slide::before {
   content:"";
   display: block;
   padding-top: 40.5%; /* 高さを幅の75%に固定 */
+}
+
+.slider {
+  padding-top: 51px;
 }
  
  /*=== slide 画像の設定 ======================================= */

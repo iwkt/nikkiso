@@ -16,12 +16,21 @@
   <body>
     <div id="Global-container">
       <nav id="MobileMenu" class="mobile_menu">
-        <ul class="mobile_menu__main">
-          <li><a href="#">製品</a></li>
-          <li><a href="#">学術</a></li>
-          <li><a href="#">企業情報</a></li>
-          <li><a href="#">投資家情報</a></li>
-          <li><a href="#">採用情報</a></li>
+        <ul class="mobile_menu__main" ontouchstart=""">
+          <li class="ul_child_item"><a href="#">製品</a>
+            <ul class="ul_child">
+              <li><a href="#">製品・サービストップへ</a></li>
+              <li><a href="#">ポンプ・システム</a></li>
+              <li><a href="#">産業用機器</a></li>
+              <li><a href="#">航空宇宙</a></li>
+              <li><a href="#">メディカル</a></li>
+              <li><a href="#">深紫外線LED</a></li>
+            </ul>
+          </li>
+          <li class="ul_child_item"><a href="#">学術</a></li>
+          <li class="ul_child_item"><a href="#">企業情報</a></li>
+          <li class="ul_child_item"><a href="#">投資家情報</a></li>
+          <li class="ul_child_item"><a href="#">採用情報</a></li>
         <!-- </ul>
         <ul> -->
           <li>
@@ -35,6 +44,7 @@
           <div class="headertop grid-spaceBetween">
             <div class="headerlogo col-3"><img class="hdrlg" src="./assets/images/hdr_logo.png" alt="">
             </div>
+            <button  class="col-2" onclick="document.querySelector('.ul_child').classList.toggle('inview');">Animation</></button>
             <!-- hamburger menu ここから-->
             <div class="nav_area col">
               <a id="navOpen" class="nav_open">
@@ -64,6 +74,7 @@
       </div><!--#Continer-->
     </div><!--#Global container-->
     <script src="./assets/js/humbger.js"></script>
+        <script src="./assets/js/clickAddclass.js"></script>
     <script src="./assets/js/scroll.js"></script>
     <script src="./assets/js/img-zoom.js"></script>
     <script src="./assets/swiper/swiper.js"></script>

@@ -1,12 +1,12 @@
 const mobilemenu = document.querySelector('#MobileMenu')
-const layor = document.querySelector('.layor');
+// const layor = document.querySelector('.layor');
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('navOpen').addEventListener('click', function () {
     this.classList.toggle('active');
     // document.getElementById('MobileMenu').classList.toggle('active');
     mobilemenu.classList.toggle('active');
-    layor.classList.toggle('active');
+    // layor.classList.toggle('active');
   })
 });
 
