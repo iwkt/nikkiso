@@ -79,7 +79,7 @@ $mcolor: #1565c0;
   background-color: $mcolor;
   transform: scaleY(0);
   z-index: 20;
-  transition: all 0.5s;
+  transition: all 0.7s;
   transform-origin: top;
 
   & li {
@@ -93,7 +93,7 @@ $mcolor: #1565c0;
 
       @for $i from 1 through 10 {
         &:nth-of-type(#{$i}) {
-          transition-delay: $i * 0.05s;
+          transition-delay: $i * 0.08s;
         }
       }
     }
@@ -117,7 +117,7 @@ $mcolor: #1565c0;
   & li:nth-of-type(n+6) {
     text-align: center;
     border-bottom: none !important;
-    padding: 17px 0;
+    padding: 0;
   }
 }
 // moblie menu ここまで　=====================
