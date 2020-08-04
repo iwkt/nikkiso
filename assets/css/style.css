@@ -63,6 +63,7 @@
   border: 1px solid #c5c5c5;
   -webkit-transform: scale(0.93);
           transform: scale(0.93);
+  width: 100%;
 }
 
 .container.active {
@@ -73,7 +74,7 @@
   margin: 9px;
 }
 
-.hdr_logo {
+.hdrlg {
   max-height: 34px;
 }
 
@@ -411,8 +412,8 @@
 /*=== 画像の表示エリア ここまで================================= */
 .acd_child {
   height: auto;
-  -webkit-transform: scaleY(0.6);
-          transform: scaleY(0.6);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
