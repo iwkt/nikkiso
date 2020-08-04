@@ -1,6 +1,58 @@
 $linecolor: #90a4ae;
 $mcolor: #1565c0;
 
+
+.acd {
+  & a {
+    display: block;
+    color: #fff;
+    padding:0 7px;
+    line-height: 49px;
+  }
+  &_child {
+    background: linear-gradient(#c5c5c5 5%, #f3f3f3 24%);
+    height: 0;
+    overflow: hidden;
+    &.inview {
+    height: auto;
+    }
+    & a {
+      color: #1565c0;
+    }
+    & i {
+      color: rgb(85, 85, 85);
+    }
+  }
+  &_parent {
+    & a {
+      position: relative;
+      &::after {
+        content: "";
+        background-image: url(../images/hamb.svg);
+        background-size: contain;
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        top: 20px;
+        right: 18px;
+        transition: 0.4s;
+      }
+    }
+    &>li {
+      background-color: #37474f;
+      border-bottom: 1px solid $linecolor;
+    }
+  }
+}
+
+.bnrTop {
+  & img {
+    border: 1px solid #c5c5c5;
+    transform: scale(.93);
+  }
+}
+
 .headerlogo {
   margin: 9px;
 }
@@ -63,6 +115,7 @@ $mcolor: #1565c0;
 // moblie menu ここから　=====================
 .fas {
   margin-left: 10px;
+  margin-right: 10px;
 }
 .form {
   border: 1px solid #fff;
@@ -71,6 +124,10 @@ $mcolor: #1565c0;
   margin: 40px 0;
   width: 300px;
   }
+.formlng {
+  line-height: 30px!important; //mobile menuのEnglishの部分
+}
+
 .mobile_menu {
   position: absolute;
   top: 51px;
@@ -89,7 +146,7 @@ $mcolor: #1565c0;
     display: block;
     color: #fff;
     padding:0 17px;
-    line-height: 50px;
+    line-height: 49px;
   }
   & span {
     display: inline-block;
@@ -97,6 +154,28 @@ $mcolor: #1565c0;
     border-right: 1px solid #fff;
     padding: 0 15px;
   }
+}
+
+.mobile_menu__main > li:nth-child(-n+5) > a {
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url(../images/toggle.svg);
+    background-size: contain;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    vertical-align: middle;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    transition: 0.4s;
+  }
+}
+
+.mobile_menu__main> li > a.inview::after {
+    content: "";
+    background-image: url(../images/toggle_minus.svg);
 }
 
 .mobile_menu__main {
@@ -129,7 +208,7 @@ $mcolor: #1565c0;
 .ul_child {
   height: 0;
   // opacity: 0;
-  transition: all 0.42s;
+  transition: all 0.6s;
   overflow: hidden;
   & li {
     background-color: #4484cd;
@@ -149,7 +228,7 @@ $mcolor: #1565c0;
       
       @for $i from 1 through 10 {
         &:nth-of-type(#{$i}) {
-          transition-delay: $i * 60ms;
+          transition-delay: $i * 90ms;
         }
       }
     }
