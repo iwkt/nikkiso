@@ -32,11 +32,11 @@
   color: #555555;
 }
 
-.acd_parent > li > a {
+.acd_parents > li > a {
   position: relative;
 }
 
-.acd_parent > li > a::after {
+.acd_parents > li > a::after {
   content: "";
   background-image: url(../images/hamb.svg);
   background-size: contain;
@@ -50,11 +50,11 @@
   transition: 0.4s ease-out;
 }
 
-.acd_parent > li > a.inview::after {
+.acd_parents > li > a.inview::after {
   background-image: url(../images/hambcross.svg);
 }
 
-.acd_parent > li {
+.acd_parents > li {
   background-color: #37474f;
   border-bottom: 1px solid #90a4ae;
 }
@@ -63,6 +63,7 @@
   border: 1px solid #c5c5c5;
   -webkit-transform: scale(0.93);
           transform: scale(0.93);
+  height: auto;
   width: 100%;
 }
 
