@@ -32,7 +32,7 @@ $mcolor: #1565c0;
       color: rgb(85, 85, 85);
     }
   }
-  &_parents {
+  &_parent {
     & > li > a {
       position: relative;
       &::after {

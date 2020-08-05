@@ -32,11 +32,11 @@
   color: #555555;
 }
 
-.acd_parents > li > a {
+.acd_parent > li > a {
   position: relative;
 }
 
-.acd_parents > li > a::after {
+.acd_parent > li > a::after {
   content: "";
   background-image: url(../images/hamb.svg);
   background-size: contain;
@@ -50,11 +50,11 @@
   transition: 0.4s ease-out;
 }
 
-.acd_parents > li > a.inview::after {
+.acd_parent > li > a.inview::after {
   background-image: url(../images/hambcross.svg);
 }
 
-.acd_parents > li {
+.acd_parent > li {
   background-color: #37474f;
   border-bottom: 1px solid #90a4ae;
 }
