@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
-const acd_parentMenu = document.querySelectorAll('.acd_parent > li > a');
+const acd_parentMenu = document.querySelectorAll('.acd_parents > li > a');
 
 document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < acd_parentMenu.length; i++) {

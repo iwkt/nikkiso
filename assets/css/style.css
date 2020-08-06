@@ -1,4 +1,54 @@
 @charset "UTF-8";
+.acd_child_test.li_four.inview {
+  height: 200px;
+}
+
+.acd_child_test.li_five.inview {
+  height: 250px;
+}
+
+.acd_child_test.li_six.inview {
+  height: 300px;
+}
+
+.acd_child_test.li_seven.inview {
+  height: 350px;
+}
+
+.acd_child_test.li_eight.inview {
+  height: 400px;
+}
+
+.acd_child_test.li_nine.inview {
+  height: 450px;
+}
+
+.acd_child_test.li_ten.inview {
+  height: 500px;
+}
+
+.acd_child_test {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #c5c5c5), color-stop(24%, #f3f3f3));
+  background: linear-gradient(#c5c5c5 5%, #f3f3f3 24%);
+  height: 0;
+  opacity: 0;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.acd_child_test.inview {
+  opacity: 1;
+  visibility: visible;
+}
+
+.acd_child_test a {
+  color: #000 !important;
+}
+
 .acd a {
   display: block;
   color: #fff;
@@ -32,11 +82,11 @@
   color: #555555;
 }
 
-.acd_parent > li > a {
+.acd_parents > li > a {
   position: relative;
 }
 
-.acd_parent > li > a::after {
+.acd_parents > li > a::after {
   content: "";
   background-image: url(../images/hamb.svg);
   background-size: contain;
@@ -50,11 +100,11 @@
   transition: 0.4s ease-out;
 }
 
-.acd_parent > li > a.inview::after {
+.acd_parents > li > a.inview::after {
   background-image: url(../images/hambcross.svg);
 }
 
-.acd_parent > li {
+.acd_parents > li {
   background-color: #37474f;
   border-bottom: 1px solid #90a4ae;
 }

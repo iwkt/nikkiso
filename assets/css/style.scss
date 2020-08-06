@@ -1,6 +1,58 @@
 $linecolor: #90a4ae;
 $mcolor: #1565c0;
 
+
+$pattern: (
+  "li_four":  200px,
+  "li_five":  250px,
+  "li_six":  300px,
+  "li_seven":  350px,
+  "li_eight":  400px,
+  "li_nine":  450px,
+  "li_ten":  500px
+);
+
+@each $key, $value in $pattern {
+  .acd_child_test.#{$key} {
+    &.inview {
+      height: $value;
+    }
+  }
+}
+
+.acd_child_test {
+  background: linear-gradient(#c5c5c5 5%, #f3f3f3 24%);
+  height: 0;
+  opacity: 0;
+  transform-origin: top;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.4s ease-out;
+
+  &.inview {
+    opacity: 1;
+    visibility: visible;
+  }
+  & a {
+    color: #000!important;
+  }
+}
+
+// .child_item {
+//   opacity: 0;
+//   transition: all 0.4s;
+//   &.inview {
+//     opacity: 1;
+
+//     @for $i from 1 through 10 {
+//       &:nth-of-type(#{$i}) {
+//         transition-delay: $i * 0.08s;
+//       }
+//     }
+//   }
+// }
+
+
 .acd {
   & a {
     display: block;
@@ -32,7 +84,7 @@ $mcolor: #1565c0;
       color: rgb(85, 85, 85);
     }
   }
-  &_parent {
+  &_parents {
     & > li > a {
       position: relative;
       &::after {

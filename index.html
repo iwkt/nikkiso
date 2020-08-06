@@ -16,7 +16,7 @@
   <body>
     <div id="Global-container">
       <nav id="MobileMenu" class="mobile_menu">
-        <ul class="mobile_menu__main" ontouchstart=""">
+        <ul class="mobile_menu__main" ontouchstart="">
           <li><a href="#">製品</a>
             <ul class="ul_child">
               <li><a href="#">製品・サービストップへ</a></li>
@@ -52,6 +52,9 @@
         <div class="headertop grid-spaceBetween">
           <div class="headerlogo col-3"><img class="hdrlg" src="./assets/images/hdr_logo.png" alt="">
           </div>
+          <div class="col-2">
+            <button onclick="document.querySelector('.child_item').classList.toggle('inview');">inview</button>
+          </div>
           <!-- hamburger menu ここから-->
           <div class="nav_area col">
             <a id="navOpen" class="nav_open">
@@ -75,8 +78,8 @@
       </header>
       <div id="Container" class="container">
         <section id="Acd">
-          <ul class="acd acd_parent">
-            <li><a><i class="fas fa-industry"></i>ポンプ・システム</a>
+          <ul class="acd acd_parents">
+            <li class="acd_parent"><a><i class="fas fa-industry"></i>ポンプ・システム</a>
               <ul class="acd acd_child">
                 <li><a href="#"><i class="far fa-file"></i>製品・サービス</a></li>
                 <li><a href="#"><i class="fas fa-chevron-circle-right"></i>キャンドモータポンプ</a></li>
@@ -90,9 +93,19 @@
                 <li><a href="#"><i class="fas fa-chevron-circle-right"></i>付臭装置</a></li>
               </ul>
             </li>
-            <li><a><i class="fas fa-cogs"></i>産業用機器</a></li>
-            <li><a><i class="fas fa-plane"></i>航空宇宙</a></li>
-            <li><a><i class="fas fa-first-aid"></i>メディカル</a>
+
+            <li class="acd_parent"><a><i class="fas fa-cogs"></i>産業用機器</a>
+              <ul class="acd acd_child_test li_five">
+                <li class="child_item"><a href="#"><i class="far fa-file"></i>製品・サービス</a></li>
+                <li class="child_item"><a href="#"><i class="fas fa-chevron-circle-right"></i>発電所用水質調整装置</a></li>
+                <li class="child_item"><a href="#"><i class="fas fa-chevron-circle-right"></i>セラミック基板製造システム</a></li>
+                <li class="child_item"><a href="#"><i class="fas fa-chevron-circle-right"></i>冷間等法圧プレス</a></li>
+                <li class="child_item"><a href="#"><i class="fas fa-chevron-circle-right"></i>除湿器（ドライヤー）</a></li>
+              </ul>
+            </li>
+
+            <li class="acd_parent"><a><i class="fas fa-plane"></i>航空宇宙</a></li>
+            <li class="acd_parent"><a><i class="fas fa-first-aid"></i>メディカル</a>
               <ul class="acd acd_child">
                 <li><a href="#"><i class="far fa-file"></i>製品・サービス</a></li>
                 <li><a href="#"><i class="fas fa-chevron-circle-right"></i>医療従事者向け情報</a></li>
@@ -101,7 +114,7 @@
                 <li><a href="#"><i class="fas fa-chevron-circle-right"></i>人工膵臓とは？</a></li>
               </ul>
             </li>
-            <li><a><i class="fas fa-lightbulb"></i>深紫外線LED</a></li>
+            <li class="acd_parent"><a><i class="fas fa-lightbulb"></i>深紫外線LED</a></li>
           </ul>
         </section>
 
