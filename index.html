@@ -53,7 +53,7 @@
           <div class="headerlogo col-3"><img class="hdrlg" src="./assets/images/hdr_logo.png" alt="">
           </div>
           <div class="col-2">
-            <button onclick="document.querySelector('.child_item').classList.toggle('inview');">inview</button>
+            <!-- <button onclick="document.querySelector('.js-fadein').classList.toggle('is-show');">inview</button> -->
           </div>
           <!-- hamburger menu ここから-->
           <div class="nav_area col">
@@ -80,7 +80,7 @@
         <section id="Acd">
           <ul class="acd acd_parents">
             <li class="acd_parent"><a><i class="fas fa-industry"></i>ポンプ・システム</a>
-              <ul class="acd acd_child">
+              <ul class="acd acd_child_test2 li_ten">
                 <li><a href="#"><i class="far fa-file"></i>製品・サービス</a></li>
                 <li><a href="#"><i class="fas fa-chevron-circle-right"></i>キャンドモータポンプ</a></li>
                 <li><a href="#"><i class="fas fa-chevron-circle-right"></i>往復動ポンプ（定量ポンプ）</a></li>
@@ -104,7 +104,15 @@
               </ul>
             </li>
 
-            <li class="acd_parent"><a><i class="fas fa-plane"></i>航空宇宙</a></li>
+            <li class="acd_parent"><a><i class="fas fa-plane"></i>航空宇宙</a>
+              <ul class="acd acd_child_test2 li_four">
+                <li class="child_item"><a href="#"><i class="far fa-file"></i>製品・サービス</a></li>
+                <li class="child_item"><a href="#"><i class="fas fa-chevron-circle-right"></i>製品一覧</a></li>
+                <li class="child_item"><a href="#"><i class="fas fa-chevron-circle-right"></i>認証</a></li>
+                <li class="child_item"><a href="#"><i class="fas fa-chevron-circle-right"></i>製産・開発体制</a></li>
+              </ul>
+            </li>
+
             <li class="acd_parent"><a><i class="fas fa-first-aid"></i>メディカル</a>
               <ul class="acd acd_child">
                 <li><a href="#"><i class="far fa-file"></i>製品・サービス</a></li>
@@ -127,16 +135,51 @@
           </div>
           
         </section>
-          
+        <section class="sitemap" >
+          <p class="acd_p">サイトマップ</p>
+          <!-- <ul class="acd acd_parents ul_six">
+            <li class="acd_parent"><a>サイトマップ</a> -->
+              <ul id="sitemap_acd" class="acd acd_parents li_six">
+                <li class="acd_parent"><a class="site_a">製品</a>
+                  <ul class="acd acd_child_test2 li_six">
+                    <li class="acd child_item"><a href="#">製品・サービストップへ</a></li>
+                    <li class="acd child_item"><a href="#">ポンプ・システム</a></li>
+                    <li class="acd child_item"><a href="#">産業用機器</a></li>
+                    <li class="acd child_item"><a href="#">航空宇宙</a></li>
+                    <li class="acd child_item"><a href="#">メディカル</a></li>
+                    <li class="acd child_item"><a href="#">深紫外線LED</a></li>
+                  </ul>
+                </li>
+                <li class="acd_parent"><a href="#">学術</a>
+                  <ul class="acd acd_child_test2 li_six">
+                    <li class="child_item"><a href="#">研究・技術情報トップへ</a></li>
+                    <li class="child_item"><a href="#">開発事例「深紫外線LED」</a></li>
+                    <li class="child_item"><a href="#">開発事例「Acrosurg.（アクロサージ）」</a></li>
+                    <li class="child_item"><a href="#">研究・技術開発の軌跡</a></li>
+                    <li class="child_item"><a href="#">ビジョンと体制</a></li>
+                    <li class="child_item"><a href="#">オープン・イノベーション</a></li>
+                  </ul>
+                </li>
+                <li class="acd_parent"><a href="#">企業情報</a></li>
+                <li class="acd_parent"><a href="#">投資家情報</a></li>
+                <li class="acd_parent"><a href="#">採用情報</a></li>
+                <li class="acd_parent"><a href="#">お問い合わせ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>  
 
             <footer id="Footer">
-            
+              <div class="footer"></div>
             </footer>
+            <img  class="ap_arrow js-fadein" src="./assets/images/ap_arrow.svg" alt="">
+            <div id="scv" style="position: fixed;bottom: 10px; right: 10px;"></div>
+        
       </div><!--#Continer-->
     </div><!--#Global container-->
+    <script src="./assets/js/fadeIn.js"></script>
     <script src="./assets/js/humbger.js"></script>
-        <script src="./assets/js/clickAddclass.js"></script>
-    <script src="./assets/js/scroll.js"></script>
+    <script src="./assets/js/clickAddclass.js"></script>
     <script src="./assets/js/img-zoom.js"></script>
     <script src="./assets/swiper/swiper.js"></script>
     <script src="./assets/js/swiper_local.js"></script>

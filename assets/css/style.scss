@@ -1,57 +1,96 @@
 $linecolor: #90a4ae;
 $mcolor: #1565c0;
 
+@mixin acd_base (
+  $transition: 0.4s
+  ) {
+    height: 0;
+    opacity: 0;
+    transform-origin: top;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all $transition ease-out;  
+}
 
+@mixin acd_inview {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin li_item {
+    content: "";
+    background-image: url(../images/hamb.svg);
+    background-size: contain;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    transition: 0.4s ease-out;
+  &.inview::after {
+    background-image: url(../images/hambcross.svg);
+  }
+}
+
+// アコーディオンの高さをeachでまわす　----------------
 $pattern: (
-  "li_four":  200px,
-  "li_five":  250px,
+  "li_four": 200px,
+  "li_five": 250px,
   "li_six":  300px,
-  "li_seven":  350px,
-  "li_eight":  400px,
-  "li_nine":  450px,
+  "li_seven":350px,
+  "li_eight":400px,
+  "li_nine": 450px,
   "li_ten":  500px
 );
 
 @each $key, $value in $pattern {
-  .acd_child_test.#{$key} {
+  .#{$key} {
     &.inview {
       height: $value;
     }
   }
 }
+// ------------------------------------------------
 
 .acd_child_test {
+  @include acd_base();
   background: linear-gradient(#c5c5c5 5%, #f3f3f3 24%);
-  height: 0;
-  opacity: 0;
-  transform-origin: top;
-  overflow: hidden;
-  visibility: hidden;
-  transition: all 0.4s ease-out;
 
   &.inview {
-    opacity: 1;
-    visibility: visible;
+    @include acd_inview();
   }
   & a {
     color: #000!important;
   }
 }
 
-// .child_item {
-//   opacity: 0;
-//   transition: all 0.4s;
-//   &.inview {
-//     opacity: 1;
+.inview.acd_child_test > li,
+.inview.acd_child > li {
+  @for $i from 1 through 10 {
+    &:nth-of-type(#{$i}) {
+      transition-delay: $i * 0.08s;
+    }
+  }
+}
 
-//     @for $i from 1 through 10 {
-//       &:nth-of-type(#{$i}) {
-//         transition-delay: $i * 0.08s;
-//       }
-//     }
-//   }
-// }
+//後で消すareaーーーーーーーーーーーーーーーー
+.acd_child_test2 {
+  @extend .acd_child_test;
+  & > li {
+    transition-timing-function: cubic-bezier(0,-0.01, 0.44, 1);
+    transition-delay: 0s !important;
+  }
+  & a {
+    color: #1565c0;
+  }
+      & i {
+      color: rgb(85, 85, 85)!important;
+    }
 
+}
+
+//ーーーーーーーーーーーーーーーーーーーーーー
 
 .acd {
   & a {
@@ -62,19 +101,10 @@ $pattern: (
   }
   &_child {
     background: linear-gradient(#c5c5c5 5%, #f3f3f3 24%);
-    height: 0;
-    opacity: 0;
-    transform-origin: top;
-    overflow: hidden;
-    visibility: hidden;
-    transition: all 0.4s ease-out;
+    @include acd_base();
 
     &.inview {
-      visibility: visible;
-      opacity: 1;
-
-    //  @for $i from 1 through 10 {
-    //   height: 50px * $i;
+      @include acd_inview();
     }
     
     & a {
@@ -109,6 +139,40 @@ $pattern: (
     }
   }
 }
+  
+.sitemap .acd_parents {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+  &.inview {
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+
+@each $key,$value in $pattern {
+  
+  .sitemap .acd_parents {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    &.inview.is-open.#{$key} {
+      height: 300px + $value;
+      opacity: 1;
+    }
+  }
+}
+
+.ap_arrow {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  z-index: 1000;
+  filter: drop-shadow(3px 5px 3px rgba(0, 0, 0,0.5));
+}
 
 .bnrTop {
   & img {
@@ -119,8 +183,70 @@ $pattern: (
   }
 }
 
+.child {
+  border-bottom: 1px solid $linecolor; 
+  &:first-child {
+    border-top: 1px solid $linecolor;
+  }
+}
+
+.child_items {
+  @include acd_base();
+  &.inview {
+    @include acd_inview();
+  }
+}
+
+.child:nth-child(-n+5) > a {
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url(../images/toggle.svg);
+    background-size: contain;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    vertical-align: middle;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    transition: all 0.4s ease-out;
+  }
+}
+
+.sitemap .child_item a {
+  position: relative;
+  font-size: 13px;
+  padding-left: 25px;
+  color: #37474f;
+  &::before {
+    content: ">";
+    position: absolute;
+    top: -1%;
+    left: 10px;
+  }
+}
+
 .container.active {
   display: none;
+}
+
+.footer {
+  background-color: gray;
+  height: 100px;
+}
+
+.js-fadein {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 2s;
+}
+
+.js-fadein.inview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 
 .headerlogo {
@@ -187,6 +313,7 @@ $pattern: (
 //ハンバーガーmenuここまで============= 
 
 // moblie menu ここから　=====================
+
 .fas,.far {
   margin-left: 10px;
   margin-right: 10px;
@@ -358,10 +485,39 @@ $pattern: (
 }
 /*=== 画像の表示エリア ここまで================================= */
 
+.sitemap > ul > li {
+  background-color: #eceff1;
+  // border-top: 1px solid $linecolor;
+  & > a {
+    padding-left: 25px;
+    color: #37474f;
+  }
+}
+
+.sitemap P {
+  text-align: center;
+  background-color: #eceff1;
+  height: 49px;
+  line-height: 49px;
+  border-top: 1px solid $linecolor;
+  
+}
+
+.sitemap .child {
+  background-color: #eceff1;
+} 
+
+//ここはさくじょよてい　下には書くな--------------------
 .acd_child {
   height: auto;
   transform: scaleY(0);
   transition: all 0.4s ease-out;
+  & a {
+    color: #1565c0;
+  }
+  & i {
+    color: rgb(85, 85, 85);
+  }
   &.inview {
     transform: scaleY(1);
   }
