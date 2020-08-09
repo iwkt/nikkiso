@@ -81,3 +81,13 @@ document.addEventListener('DOMContentLoaded', function () {
     Acd1_ul.classList.toggle('acd2_2_open');
   })
 })
+
+const Acd1_ttl3 = document.querySelector('#Acd1_ttl3');
+const Acd2_ul_3 = document.querySelector('#Acd2_ul_3');
+document.addEventListener('DOMContentLoaded', function () {
+  Acd1_ttl3.addEventListener('click', function (e) {
+    e.preventDefault();
+    Acd2_ul_3.classList.toggle('acd2_3_open');
+    Acd1_ul.classList.toggle('acd2_3_open');
+  })
+})

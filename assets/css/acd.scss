@@ -14,19 +14,19 @@ $aHight: 49px;
   transition: all 0.4s ease-out;
 }
 
+@mixin inview {
+  max-height: 800px;
+  transform: scaleY(1);
+  opacity: 1;
+  overflow-y: visible;
+}
+
 @mixin acd_base2 {
   height: 0;
   opacity: 0;
   overflow-y: hidden;
   transform-origin: top;
   transition: all 0.6s ease;
-}
-
-@mixin inview {
-  max-height: 800px;
-  transform: scaleY(1);
-  opacity: 1;
-  overflow-y: visible;
 }
 
 @mixin inview2 {
@@ -39,7 +39,8 @@ $aHight: 49px;
     display: block;
     background-color: #000;
     width: 100%;
-    height: $aHight;
+    height: $aHight + 1;
+    text-align: center;
     & a {
       display: inline-block !important;
       background-color: #000;
@@ -159,22 +160,3 @@ button {
   height: $aHight;
   border: none;
 }
-
-// .sitemap1,
-// .sitemap2 {
-//   & a {
-//     display: block;
-//     line-height: $aHight;
-//   } 
-// }
-
-// .sitemap1 {
-//   background-color: greenyellow;
-//   padding-bottom: 50px;
-// }
-
-// .sitemap2 {
-//   background-color: yellow;
-//   padding-top: 50px;
-//   padding-bottom: 20px;
-// }
