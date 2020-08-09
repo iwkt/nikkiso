@@ -37,13 +37,12 @@ $aHight: 49px;
 .acd0_ {
   &ttl {
     display: block;
-    background-color: #000;
+    background-color: #37474f;
     width: 100%;
     height: $aHight + 1;
     text-align: center;
     & a {
       display: inline-block !important;
-      background-color: #000;
       line-height: $aHight;
       color: #fff;
     }
@@ -59,12 +58,13 @@ $aHight: 49px;
 
 $acd_pattarn: (
   ".inview":  $aHight * 3,
-  ".inview.acd2_1_open":  $aHight * (3 + 6),
-  ".inview.acd2_1_open.acd2_2_open":  $aHight * (3 + 6 + 5),
-  ".inview.acd2_1_open.acd2_2_open.acd2_3_open":  $aHight * (3 + 6 + 5 + 4),
+  ".inview.acd2_1_open":  $aHight * (3 + 6) + 6,
+  ".inview.acd2_1_open.acd2_2_open":  $aHight * (3 + 6 + 5)+ 11,
+  ".inview.acd2_1_open.acd2_3_open":  $aHight * (3 + 6 + 3),
+  ".inview.acd2_1_open.acd2_2_open.acd2_3_open":  ($aHight - 2) * (3 + 6 + 5 + 4),
   ".inview.acd2_2_open":  $aHight * (3 + 5),
-  ".inview.acd2_2_open.acd2_3_open":  $aHight * (3 + 5 + 4),
-  ".inview.acd2_3_open":  $aHight * (3 + 6 + 5 + 4),
+  ".inview.acd2_2_open.acd2_3_open":  $aHight * (3 + 5 + 3),
+  ".inview.acd2_3_open":  $aHight * (3 + 3),
 );
 
 // .acd1_ul {
