@@ -52,20 +52,6 @@ $pattern: (
   }
 }
 // ------------------------------------------------
-
-.acd_child_test {
-  @include acd_base();
-  background: linear-gradient(#c5c5c5 5%, #f3f3f3 24%);
-
-  &.inview {
-    @include acd_inview();
-  }
-  & a {
-    color: #000!important;
-  }
-}
-
-.inview.acd_child_test > li,
 .inview.acd_child > li {
   @for $i from 1 through 10 {
     &:nth-of-type(#{$i}) {
@@ -73,24 +59,6 @@ $pattern: (
     }
   }
 }
-
-//後で消すareaーーーーーーーーーーーーーーーー
-.acd_child_test2 {
-  @extend .acd_child_test;
-  & > li {
-    transition-timing-function: cubic-bezier(0,-0.01, 0.44, 1);
-    transition-delay: 0s !important;
-  }
-  & a {
-    color: #1565c0;
-  }
-      & i {
-      color: rgb(85, 85, 85)!important;
-    }
-
-}
-
-//ーーーーーーーーーーーーーーーーーーーーーー
 
 .acd {
   & a {
@@ -234,6 +202,10 @@ $pattern: (
 .footer {
   background-color: gray;
   height: 100px;
+  width: 100%;
+  // position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .js-fadein {
@@ -420,6 +392,7 @@ $pattern: (
   &.inview {
     // opacity: 1;
     height: 300px;
+
     // @for $i from 1 through 6 {
     //   height: 50px * $i;
     // }
@@ -506,33 +479,3 @@ $pattern: (
 .sitemap .child {
   background-color: #eceff1;
 } 
-
-//ここはさくじょよてい　下には書くな--------------------
-.acd_child {
-  height: auto;
-  transform: scaleY(0);
-  transition: all 0.4s ease-out;
-  & a {
-    color: #1565c0;
-  }
-  & i {
-    color: rgb(85, 85, 85);
-  }
-  &.inview {
-    transform: scaleY(1);
-  }
-}
-
-.acd_child > li {
-  display: none;
-}
-
-.inview.acd_child > li {
-  display: block;
-
-  @for $i from 1 through 10 {
-    &:nth-of-type(#{$i}) {
-      transition-delay: $i * 0.08s;
-    }
-  }
-}

@@ -1,0 +1,180 @@
+html {
+  box-sizing: border-box;
+}
+
+$aHight: 49px;
+
+@mixin acd_base {
+  // height: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow-y: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.4s ease-out;
+}
+
+@mixin acd_base2 {
+  height: 0;
+  opacity: 0;
+  overflow-y: hidden;
+  transform-origin: top;
+  transition: all 0.6s ease;
+}
+
+@mixin inview {
+  max-height: 800px;
+  transform: scaleY(1);
+  opacity: 1;
+  overflow-y: visible;
+}
+
+@mixin inview2 {
+  opacity: 1;
+  overflow-y: visible;
+}
+
+.acd0_ {
+  &ttl {
+    display: block;
+    background-color: #000;
+    width: 100%;
+    height: $aHight;
+    & a {
+      display: inline-block !important;
+      background-color: #000;
+      line-height: $aHight;
+      color: #fff;
+    }
+  }
+}
+
+.acd1_ttl {
+  background-color: rgb(43, 43, 43);
+  & a {
+    color: #fff;
+  }
+}
+
+$acd_pattarn: (
+  ".inview":  $aHight * 3,
+  ".inview.acd2_1_open":  $aHight * (3 + 6),
+  ".inview.acd2_1_open.acd2_2_open":  $aHight * (3 + 6 + 5),
+  ".inview.acd2_1_open.acd2_2_open.acd2_3_open":  $aHight * (3 + 6 + 5 + 4),
+  ".inview.acd2_2_open":  $aHight * (3 + 5),
+  ".inview.acd2_2_open.acd2_3_open":  $aHight * (3 + 5 + 4),
+  ".inview.acd2_3_open":  $aHight * (3 + 6 + 5 + 4),
+);
+
+// .acd1_ul {
+//   @include acd_base2();
+//   &.inview {
+//     @include inview2();
+//       height: ($aHight) * 3;
+//   }
+
+//   &.inview.acd2_1_open {
+//     @include inview2();
+//       height: ($aHight) * 9;
+//   }
+
+//   &.inview.acd2_3_open {
+//     @include inview2();
+//       height: ($aHight) * 8;
+//   }
+// }
+
+@each $key,$value in $acd_pattarn {
+  .acd1_ul {
+    &#{$key} {
+      height: $value
+    }
+  }
+}
+
+.acd1_ul {
+  @include acd_base2();
+  &.inview {
+    @include inview2();
+  }
+}
+
+
+$pattarn: (
+  "1":  $aHight * 5,
+  "2":  $aHight * 4,
+  "3":  $aHight * 3,
+);
+
+@each $key,$value in $pattarn {
+  #Acd2_ul_ {
+    &#{$key} .inview {
+      height: $value;
+    }
+  } 
+}
+
+#Acd2_ul_1 {
+  @include acd_base2();
+  &.acd2_1_open  {
+    @include inview2();
+    height: ($aHight + 1) * 6;
+  }
+}
+
+@each $key,$value in $pattarn {
+  #Acd2_ul_2 {
+    @include acd_base2();
+    &.acd2_2_open {
+      @include inview2();
+      height: ($aHight + 1) * 5;
+    }
+  }
+}
+
+@each $key,$value in $pattarn {
+  #Acd2_ul_3 {
+    @include acd_base2();
+    &.acd2_3_open {
+      @include inview2();
+      height: ($aHight + 1) * 3;
+    }
+  }
+}
+
+.acd2_ul {
+  background-color: #fff;
+  a {
+    color: gray;
+    padding-left: 25px;
+  }
+  & li:not(:nth-of-type(1)) {
+    border-top: 1px solid lightsteelblue;
+  }
+}
+
+
+button {
+  width: 40px;
+  height: $aHight;
+  border: none;
+}
+
+// .sitemap1,
+// .sitemap2 {
+//   & a {
+//     display: block;
+//     line-height: $aHight;
+//   } 
+// }
+
+// .sitemap1 {
+//   background-color: greenyellow;
+//   padding-bottom: 50px;
+// }
+
+// .sitemap2 {
+//   background-color: yellow;
+//   padding-top: 50px;
+//   padding-bottom: 20px;
+// }
