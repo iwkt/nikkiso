@@ -1,0 +1,70 @@
+.headerlogo {
+  margin: 9px;
+}
+
+.hdrlg {
+  max-height: 34px;
+}
+
+.headertop {
+  position: fixed;
+  background-color: #fff;
+  height: 51px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav_area a {
+  position: fixed;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  background-color: #1565c0;
+  z-index: 2;
+}
+
+.nav_open div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.nav_open div:nth-of-type(1) {
+  -webkit-transform: translate(-50%, -10px);
+          transform: translate(-50%, -10px);
+}
+
+.nav_open div:nth-of-type(3) {
+  -webkit-transform: translate(-50%, 7px);
+          transform: translate(-50%, 7px);
+}
+
+.nav_open.active div:nth-last-child(1) {
+  -webkit-transform: rotate(45deg) translate(-50%, 0px);
+          transform: rotate(45deg) translate(-50%, 0px);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.nav_open.active div:nth-last-child(2) {
+  opacity: 0;
+}
+
+.nav_open.active div:nth-last-child(3) {
+  -webkit-transform: rotate(-45deg) translate(-50%, 0px);
+          transform: rotate(-45deg) translate(-50%, 0px);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+/*# sourceMappingURL=style.css.map */
