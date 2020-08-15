@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
-    <title>Document</title>
+    <title>NIKKISO_M</title>
     <link href="../assets/slick/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="../assets/slick/slick.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
@@ -16,24 +16,31 @@
   </head>
   <body>
     <div id="global-container">
-      <nav id="" class="mobile_menu">
+      <nav id="MM" class="mobile_menu">
         <div id="MM_bk_container" class="mm__bk__container">
           <div class="mm__bk__menu grid-noGutter">
             <div class="mm__bk__ttl col-12"><a>Menu</a></div>
             <div class="menu_item col-12">
               <a>HOME</a>
             </div>
-            <div class="menu_item col-12">
-              <a>製品情報</a>
+            <div class="menu_item col-12 grid-spaceBetween">
+              <a class="col-10">製品情報</a>
+              <a id="Link__Product" class="col link_mark" href="#"><i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="menu_item col-12 grid-spaceBetween">
+              <a class="col-10">事業情報</a>
+              <a id="Link__Bisiness" class="col link_mark" href="#"><i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="menu_item col-12 grid-spaceBetween">
+              <a class="col-10">研修情報</a>
+              <a id="Link__Traning" class="col link_mark" href="#"><i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="menu_item col-12 grid-spaceBetween">
+              <a class="col-10">拠点情報</a>
+              <a id="Link__Hub" class="col link_mark" href="#"><i class="fas fa-angle-right"></i></a>
             </div>
             <div class="menu_item col-12">
-              <a>事業情報</a>
-            </div>
-            <div class="menu_item col-12">
-              <a>拠点情報</a>
-            </div>
-            <div class="menu_item col-12">
-              <a>適正使用情報</a>
+              <a >適正使用情報</a>
             </div>
             <div class="menu_item col-12">
               <a>製品添付文書</a>
@@ -45,21 +52,55 @@
               <a>ニュース＆トピックス</a>
             </div>
             <div class="menu_item col-12">
-              <ul>
-                <li><a href="#">個人情報の取り扱い</a> </li>
-                <li><a href="#">当サイトについて</a> </li>
-                <li><a href="#">サイトマップ</a> </li>
+              <ul class="mm__bk__ul">
+                <li><a class="mm__bk__ul__a" href="#">・個人情報の取り扱い</a> </li>
+                <li><a class="mm__bk__ul__a" href="#">・当サイトについて</a> </li>
+                <li><a class="mm__bk__ul__a" href="#">・サイトマップ</a> </li>
               </ul>
             </div>
-      
+            <div class="link_box">Grobal Site</div>
           </div>
         </div>
       </nav>
 
       <div id="container">
+        <section id="container__section__product" class="container__section__product grid" >
+          <div id="section__product__arrow" class="col">
+            <a href="#"><i class="fas fa-angle-left"></i>製品情報</a>
+          </div>
+          <ul class="section__product__items col-12">
+            <li class="section__product__item__parent">
+              <a class="product_item__ttl" href="#">血液浄化関連</a>
+              <ul class="section__product__item__chidren">
+                <li class="section__product__item__chid"><a href="#">透析装置</a> </li>
+                <li><a href="#">透析装置</a> </li>
+                <li><a href="#">透析装置</a></li>
+                <li><a href="#">透析装置</a></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="container__section__bisiness" class="container__section__bisiness">
+          <div id="section__bisiness__arrow" class="">
+            <a href="#"><i class="fas fa-angle-left"></i></a>
+          </div>
+          <h1 style="font-size: 48px; margin: 200px 50px;" >事業情報</h1>
+        </section>
+
+        <section id="container__section__traning" class="container__section__traning">
+          <div id="section__traning__arrow" class="">
+            <a href="#"><i class="fas fa-angle-left"></i></a>
+          </div>
+        </section>
+
+        <section class="container__section__mmTop">
         <div class="mm__cover"></div>
-        <section class="section__mmTop">
-          <div class="mm__hdr grid-spaceBetween">
+          <div class="headertop mm__hdr grid-spaceBetween">
             <div class="mm__hdr__logo  col-3"><img class="mm__img mm__hdr__logoImg" src="../assets/images/hdr_logo.png" alt="">
             </div>
             <!-- hamburger menu ここから-->
@@ -79,6 +120,6 @@
     </div>
   
     <script src="./assets/js/hambgr.js"></script>
-    <!-- <script src="./assets/js/addclass.js"></script> -->
+    <script src="./assets/js/addclass.js"></script>
   </body>
 </html>
