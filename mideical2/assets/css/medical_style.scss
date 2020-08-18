@@ -183,6 +183,7 @@ $c_mmline: #f3f3f3;
       transform: translateX(0);
       visibility: visible;
       opacity: 1;
+      overflow-y: scroll;
     }
   }
   &menu a {
