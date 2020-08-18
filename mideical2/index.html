@@ -6,13 +6,10 @@
     <meta name="viewport"content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
     <title>NIKKISO_M</title>
-    <link href="../assets/slick/slick-theme.css" rel="stylesheet" type="text/css">
-    <link href="../assets/slick/slick.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/reset_style.css">
+    <link rel="stylesheet" href="../assets/swiper/swiper.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/medical_style.css">
-    <script src="../assets/jQuery/jquery.min.js"></script>
-    <script src="../assets/slick/slick.min.js"></script>
   </head>
   <body>
     <div id="global-container">
@@ -99,26 +96,66 @@
         </section>
 
         <section class="container__section__mmTop">
-        <div class="mm__cover"></div>
-          <div class="headertop mm__hdr grid-spaceBetween">
-            <div class="mm__hdr__logo  col-3"><img class="mm__img mm__hdr__logoImg" src="../assets/images/hdr_logo.png" alt="">
-            </div>
-            <!-- hamburger menu ここから-->
-            <div class="nav_area col">
-              <a id="navOpen" class="nav_open">
-                <div></div>
-                <div></div>
-                <div></div>
-              </a>
-            </div>
-            <!-- hamburger menu ここまで--> 
+          <div class="mm__cover"></div>
+            <div class="headertop mm__hdr grid-spaceBetween">
+              <div class="mm__hdr__logo  col-3"><img class="mm__img mm__hdr__logoImg" src="../assets/images/hdr_logo.png" alt="">
+              </div>
+              <!-- hamburger menu ここから-->
+              <div class="nav_area col">
+                <a id="navOpen" class="nav_open">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </a>
+              </div>
+              <!-- hamburger menu ここまで--> 
           </div>
+
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slide1">
+                  <!-- <img src="../assets/images/kvimg_dcs200si_sp.jpg" alt=""> -->
+                  <div class="kv_img01 kvimg"></div>
+                  <div class="kv_txtbg">
+                    
+                  </div>
+                  <!-- <img class="kv_txtbg" src="../assets/images/kv_txtbg.png" alt=""> -->
+                </div>
+                <div class="swiper-slide slide2">
+                  <div class="kv_img02 kvimg"></div>
+                  <div class="kv_txtbg">
+                    <img class="kv_txt" src="./assets/images/kv_dcs200si (1).png" alt="">
+                  </div>
+                  <!-- <img src="../assets/images/kvimg_dad70si_sp.jpg" alt=""> -->
+                 
+                  <!-- <img class="kv_txtbg" src="../assets/images/kv_txtbg.png" alt=""> -->
+                </div> 
+                <div class="swiper-slide slide3">
+                  <div class="kv_img03 kvimg"></div>
+                  <div class="kv_txtbg"></div>
+                  <!-- <img src="../assets/images/kvimg_dabsi_sp.jpg" alt=""> -->
+                 
+                  <!-- <img class="kv_txtbg" src="../assets/images/kv_txtbg.png" alt="">  -->
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- Slider main container -->
         </section>
       </div>
 
       
     </div>
-  
+    <script src="../assets/swiper/swiper.js"></script>
+    <script src="../assets/js/swiper_local.js"></script>
     <script src="./assets/js/hambgr.js"></script>
     <script src="./assets/js/addclass.js"></script>
   </body>

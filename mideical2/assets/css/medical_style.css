@@ -1,5 +1,5 @@
 #container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -12,14 +12,12 @@
 }
 
 #container.active {
-  position: fixed;
   -webkit-transform: translateX(80%);
           transform: translateX(80%);
 }
 
 .container__section__mmTop {
   position: absolute;
-  background-color: #b8a487;
   height: 100%;
   width: 100%;
   z-index: 10;
@@ -245,5 +243,50 @@
 
 .mobile_menu {
   width: 80%;
+}
+
+.kvimg {
+  height: 510px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin-top: 50px;
+  margin-bottom: -230px;
+}
+
+.kv_img01 {
+  background-image: url(../../../assets/images/kvimg_dad70si_sp.jpg);
+}
+
+.kv_img02 {
+  background-image: url(../../../assets/images/kvimg_dcs200si_sp.jpg);
+}
+
+.kv_img03 {
+  background-image: url(../../../assets/images/kvimg_dabsi_sp.jpg);
+}
+
+.kv_txtbg {
+  background-image: url(../../../assets/images/kv_txtbg.png);
+  background-position: center center;
+  background-size: cover;
+  height: 230px;
+  margin-bottom: 50px;
+}
+
+.kv_txt {
+  zoom: 0.5;
+  display: block;
+  padding: 50px 30px 20px;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+.swiper-container {
+  background-color: #fff;
+}
+
+.swiper-pagination {
+  bottom: 30px !important;
 }
 /*# sourceMappingURL=medical_style.css.map */

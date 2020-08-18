@@ -3,7 +3,8 @@ $c_mmline: #f3f3f3;
 
 
 #container {
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   // background-color: rgb(184, 164, 135);
@@ -13,7 +14,6 @@ $c_mmline: #f3f3f3;
   transform: translateX(0);
   transition: all 0.4s ease;
   &.active {
-    position: fixed;
     transform: translateX(80%);
   }
 }
@@ -22,7 +22,6 @@ $c_mmline: #f3f3f3;
 
   &mmTop {
     position: absolute;
-    background-color: rgb(184, 164, 135);
     height: 100%;
     width: 100%;
     z-index: 10;
@@ -233,3 +232,51 @@ $c_mmline: #f3f3f3;
 .mobile_menu {
   width: 80%;
 }
+
+//swiper ----------------------------------
+.kvimg {
+  height: 510px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin-top: 50px;
+  margin-bottom: -230px; 
+}
+
+.kv_img01 {
+  // height: 210px;
+  // object-fit: cover;
+  background-image: url(../../../assets/images/kvimg_dad70si_sp.jpg);
+}
+.kv_img02 {
+  background-image: url(../../../assets/images/kvimg_dcs200si_sp.jpg);
+}
+.kv_img03 {
+  background-image: url(../../../assets/images/kvimg_dabsi_sp.jpg);
+}
+
+.kv_txtbg {
+  background-image: url(../../../assets/images/kv_txtbg.png);
+  background-position: center center;
+  background-size: cover;
+  height: 230px;
+    margin-bottom: 50px;
+}
+
+.kv_txt {
+  zoom: 0.5;
+  display: block;
+  padding: 50px 30px 20px;
+  transform: translateY(60px);
+}
+
+.swiper- {
+  &container {
+    background-color: #fff;
+  }
+  &pagination {
+    bottom: 30px !important;
+  }
+}
+
+
