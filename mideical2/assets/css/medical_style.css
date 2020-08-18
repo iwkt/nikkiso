@@ -101,6 +101,7 @@
 .mm__cover.active {
   opacity: 1;
   visibility: visible;
+  z-index: 2;
 }
 
 .mm__hdr__logo {

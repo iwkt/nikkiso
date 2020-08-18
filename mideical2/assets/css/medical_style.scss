@@ -94,6 +94,7 @@ $c_mmline: #f3f3f3;
     &.active {
       opacity: 1;
       visibility: visible;
+      z-index: 2;
     }
   }
   &__hdr{
