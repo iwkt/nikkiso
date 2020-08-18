@@ -3,8 +3,7 @@ $c_mmline: #f3f3f3;
 
 
 #container {
-  // position: absolute;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   // background-color: rgb(184, 164, 135);
@@ -15,6 +14,7 @@ $c_mmline: #f3f3f3;
   transition: all 0.4s ease;
   &.active {
     transform: translateX(80%);
+    position: fixed;
   }
 }
 
@@ -69,7 +69,7 @@ $c_mmline: #f3f3f3;
 
 .link_box {
   font-size: 14px;
-  width: 260px;
+  width: 200px;
   height: 40px;
   line-height: 40px;
   background-color: #000;
@@ -281,4 +281,6 @@ $c_mmline: #f3f3f3;
   }
 }
 
-
+.damy {
+  height: 1000px;
+}

@@ -1,5 +1,5 @@
 #container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,6 +13,7 @@
 #container.active {
   -webkit-transform: translateX(80%);
           transform: translateX(80%);
+  position: fixed;
 }
 
 .container__section__mmTop {
@@ -74,7 +75,7 @@
 
 .link_box {
   font-size: 14px;
-  width: 260px;
+  width: 200px;
   height: 40px;
   line-height: 40px;
   background-color: #000;
@@ -289,5 +290,9 @@
 
 .swiper-pagination {
   bottom: 30px !important;
+}
+
+.damy {
+  height: 1000px;
 }
 /*# sourceMappingURL=medical_style.css.map */
