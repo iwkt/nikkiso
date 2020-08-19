@@ -1,6 +1,13 @@
 $c_mmline: #f3f3f3;
 
 
+.bgblack {
+  background-color: #424242;
+  color: white;
+  &__container {
+
+  }
+}
 
 #container {
   position: absolute;
@@ -85,7 +92,7 @@ $c_mmline: #f3f3f3;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
@@ -102,6 +109,15 @@ $c_mmline: #f3f3f3;
     &__logo {
       margin: 9px;
     }
+  }
+}
+
+#nav__mm__hdr {
+  transform: translateX(0);
+    transition: all 0.4s ease;
+  &.active {
+    // display: none;
+    transform: translateX(80%);
   }
 }
 
@@ -236,6 +252,12 @@ $c_mmline: #f3f3f3;
 }
 
 //swiper ----------------------------------
+.kv_copy {
+  padding-left: 15px;
+  color: #fff;
+  padding-top: 35px;
+  font-size: 0.8rem;
+}
 .kvimg {
   height: 510px;
   background-repeat: no-repeat;
@@ -262,7 +284,7 @@ $c_mmline: #f3f3f3;
   background-position: center center;
   background-size: cover;
   height: 230px;
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .kv_txt {
