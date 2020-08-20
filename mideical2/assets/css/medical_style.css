@@ -1,6 +1,12 @@
 .bgblack {
   background-color: #424242;
   color: white;
+  padding: 3rem 0;
+}
+
+.bgblack__container {
+  width: 94%;
+  margin: 0 auto;
 }
 
 #container {
@@ -318,5 +324,9 @@
 
 .damy {
   height: 1000px;
+}
+
+.toptopics {
+  padding: 0 .5rem 1rem;
 }
 /*# sourceMappingURL=medical_style.css.map */

@@ -4,8 +4,10 @@ $c_mmline: #f3f3f3;
 .bgblack {
   background-color: #424242;
   color: white;
+  padding: 3rem 0;
   &__container {
-
+    width: 94%;
+    margin: 0 auto;
   }
 }
 
@@ -305,4 +307,16 @@ $c_mmline: #f3f3f3;
 
 .damy {
   height: 1000px;
+}
+
+.toptopics {
+  padding: 0 .5rem 1rem;
+  // &__news {
+  //   padding-right: 15px;
+  //   padding-bottom: 10px;
+  //   margin-bottom: 30px;
+  // }
+  // &__info {
+  //   padding-left: 15px;
+  // }
 }

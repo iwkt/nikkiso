@@ -3,12 +3,12 @@ let swiper = new Swiper('.swiper-container', {
   loop: true, //最後に達したら先頭に戻る
   autoHeight: false,
 
-  // autoplay: {
-  //   delay: 3000,
-  //   stopOnLastSlide: false,
-  //   disableOnInteraction: false,
-  //   reverseDirection: false
-  // },
+  autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+    reverseDirection: false
+  },
 
   //ページネーション表示の設定
   pagination: {
