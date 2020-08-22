@@ -6,7 +6,7 @@ $c_mmline: #f3f3f3;
   color: white;
   padding: 2.5rem 0;
   &__container {
-    width: 94%;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -310,12 +310,13 @@ $c_mmline: #f3f3f3;
 }
 
 .toptopics {
-  padding: 15px;
+  padding: 0 3%;
   & li:nth-child(odd) {
     background-color: #3a3a3a;
   }
   &__atcl__ttl {
     font-size: 0.85rem;
+    line-height: 17px;
   }
   &__date {
     font-size: 0.8em;
@@ -329,7 +330,7 @@ $c_mmline: #f3f3f3;
     }
   }
   &__topic {
-    padding: 15px 0;
+    padding: 15px;
   }
   &__ttl {
     font-size: 1.2rem;

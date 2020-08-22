@@ -5,7 +5,7 @@
 }
 
 .bgblack__container {
-  width: 94%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -327,7 +327,7 @@
 }
 
 .toptopics {
-  padding: 15px;
+  padding: 0 3%;
 }
 
 .toptopics li:nth-child(odd) {
@@ -336,6 +336,7 @@
 
 .toptopics__atcl__ttl {
   font-size: 0.85rem;
+  line-height: 17px;
 }
 
 .toptopics__date {
@@ -352,7 +353,7 @@
 }
 
 .toptopics__topic {
-  padding: 15px 0;
+  padding: 15px;
 }
 
 .toptopics__ttl {
