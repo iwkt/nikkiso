@@ -4,7 +4,7 @@ $c_mmline: #f3f3f3;
 .bgblack {
   background-color: #424242;
   color: white;
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   &__container {
     width: 94%;
     margin: 0 auto;
@@ -310,13 +310,43 @@ $c_mmline: #f3f3f3;
 }
 
 .toptopics {
-  padding: 0 .5rem 1rem;
-  // &__news {
-  //   padding-right: 15px;
-  //   padding-bottom: 10px;
-  //   margin-bottom: 30px;
-  // }
-  // &__info {
-  //   padding-left: 15px;
-  // }
+  padding: 15px;
+  & li:nth-child(odd) {
+    background-color: #3a3a3a;
+  }
+  &__atcl__ttl {
+    font-size: 0.85rem;
+  }
+  &__date {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    &__tag {
+      background-color: #707070;
+      display: inline-block;
+      font-size: 0.8em;
+      padding: 3px 5px;
+      margin-left: 20px;
+    }
+  }
+  &__topic {
+    padding: 15px 0;
+  }
+  &__ttl {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 20px;
+      border: 3px solid #005c92;
+      display: inline-block;
+      top: 2px;
+      left: 0;
+    }
+  }
 }
