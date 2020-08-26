@@ -1,0 +1,31 @@
+.hbg_block {
+  position: fixed;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #1565c0;
+}
+
+.hbg_block div {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hbg_block div:nth-child(1) {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.hbg_block.active div:nth-child(1) {
+  -webkit-transform: translate(-50%, -50%) rotate(0);
+          transform: translate(-50%, -50%) rotate(0);
+}
+/*# sourceMappingURL=hmbgr.css.map */
