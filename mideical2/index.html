@@ -16,8 +16,6 @@
     <div id="global-container">
 
       <nav id="MM" class="mobile_menu">
-
-          <!-- hdr nav menu ここから-->
         <div id="nav__mm__hdr" class="headertop mm__hdr  grid-spaceBetween">
           <div class="mm__hdr__logo  col-3"><a href="../index.html"><img class="mm__img mm__hdr__logoImg" src="../assets/images/hdr_logo.png" alt=""></a> 
           </div>
@@ -118,7 +116,7 @@
           <div class="mm__cover"></div>
 
           <!-- Slider main container -->
-          <div class="swiper-container">
+          <div class="swiper-container mobile-swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -147,6 +145,69 @@
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- Slider main container -->
+
+          <div class="pc grid_sm-hidden">
+            <div class="pc__container">
+              <nav class="pc__nav grid">
+                <div class="col-4 grid">
+                  <div class="col-6">
+                    <img class="pc__nav__img" src="../assets/images/logo165_73.png" alt="">
+                  </div>
+                  <div class="col-6-middle">
+                    <div class="pc__nav__gsite"><a class="tri" href="#">GLOBAL SITE</a></div>
+                    <div class="pc__nav__msite"><a class="" href="#">医療従事者向け情報サイト</a></div>
+                  </div>
+                </div>
+                <div class="col-8-middle-right">
+                  <ul class="pc__nav__list">
+                    <li><a class="pc__nav__item" href="#">HOME</a></li>
+                    <li><a class="pc__nav__item" href="#">製品情報</a></li>
+                    <li><a class="pc__nav__item" href="#">研修情報</a></li>
+                    <li><a class="pc__nav__item" href="#">美食情報</a></li>
+                    <li><a class="pc__nav__item" href="#">和食情報</a></li>
+                    <li><a class="pc__nav__item" href="#">中華情報</a></li>
+                    <li><a class="pc__nav__item" href="#">お問い合わせ</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Slider main container -->
+          <div class="swiper-container pc__swiper grid_sm-hidden">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper pc__swp_wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide pc__slide">
+                <div class="pc__swiper__kv_txtbg">
+                  <img class="pc__swiper__kv_txt" src="./assets/images/kv_dad70si.png" alt="">
+                  <p class="kv_copy">司令塔機能の追求</p>
+                </div>
+                <div class="kv_img01 pc__swiper__kvimg"></div>
+              </div>
+              <div class="swiper-slide pc__slide">
+                <div class="pc__swiper__kv_txtbg">
+                  <img class="pc__swiper__kv_txt" src="./assets/images/kv_dcs200si (1).png" alt="">
+                  <p class="kv_copy">至適透析の追求</p>
+                </div>
+                <div class="kv_img02 pc__swiper__kvimg"></div>
+              </div>
+              <div class="swiper-slide pc__slide">
+                <div class="pc__swiper__kv_txtbg">
+                  <img class="pc__swiper__kv_txt" src="./assets/images/kv_dabsi.png" alt="">
+                  <p class="kv_copy">「ラクしてきれい」の追求</p>
+                </div>
+                <div class="kv_img03 pc__swiper__kvimg"></div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -338,8 +399,6 @@
       </div>
 
       
-    </div>
-
     </div>
     <!-- <script src="../assets/js/fadeIn.js"></script> -->
     <script src="../assets/swiper/swiper.js"></script>
